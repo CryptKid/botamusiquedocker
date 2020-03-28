@@ -1,0 +1,13 @@
+version: '3.3'
+services:
+        botamusique:
+                build: .
+                image: cryptkid2/botamusique:testing
+                container_name: botamusiqe
+                ports:
+                        - 80:80
+                volumes:
+                        - /tmp/botamusique.pem:/etc/botamusique.pem
+                        - ./configuration.ini:/etc/configuration.ini 
+                environment:
+                        - CONFIG_FILE=/etc/configuration.ini
