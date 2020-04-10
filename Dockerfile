@@ -1,4 +1,5 @@
 FROM ubuntu:rolling
+LABEL maintainer=botamusiquedocker@zehka.net
 RUN apt update
 RUN apt install python3 opus-tools ffmpeg curl python3-venv -y
 RUN rm -rf /var/lib/apt/lists/*
